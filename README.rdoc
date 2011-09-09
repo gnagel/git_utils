@@ -15,6 +15,9 @@ A gem that provides simple git & gem utility scripts.
   $ git_commit.sh "My message here ..."
   > ... your git project is checked in & synced with the server
 
+  $ gem_publish.sh
+  > ... build, publish, and install the gem
+
 == REQUIREMENTS:
 
 * None

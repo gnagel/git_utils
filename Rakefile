@@ -18,6 +18,7 @@ $hoe = Hoe.spec 'git_utils' do |p|
   p.remote_rdoc_dir      = '' # Release to root only one project
   p.post_install_message = 'PostInstall.txt'
   p.extra_deps          = []
+  p.extra_deps << ['hoe', '>= 2.1.0']
 end
 
 begin
