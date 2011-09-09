@@ -1,0 +1,10 @@
+/Users/glenn/Documents/GitHub/git_utils/git_utils/advanced_math.gemspec
+/Users/glenn/Documents/GitHub/git_utils/git_utils/History.txt
+/Users/glenn/Documents/GitHub/git_utils/git_utils/lib/git_utils.rb
+/Users/glenn/Documents/GitHub/git_utils/git_utils/Manifest.txt
+/Users/glenn/Documents/GitHub/git_utils/git_utils/PostInstall.txt
+/Users/glenn/Documents/GitHub/git_utils/git_utils/README.rdoc
+/Users/glenn/Documents/GitHub/git_utils/git_utils/script/gem_publish.sh
+/Users/glenn/Documents/GitHub/git_utils/git_utils/script/git_commit.sh
+/Users/glenn/Documents/GitHub/git_utils/git_utils/spec/git_utils_spec.rb
+/Users/glenn/Documents/GitHub/git_utils/git_utils/spec/spec_helper.rb

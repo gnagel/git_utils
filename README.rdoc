@@ -1,0 +1,28 @@
+== git_utils
+
+* https://github.com/gnagel/mercury-wireless-public/tree/master/ruby/git_utils
+
+== DESCRIPTION:
+
+A gem that provides simple git & gem utility scripts.
+
+== FEATURES/PROBLEMS:
+
+* Awesomeness!
+
+== SYNOPSIS:
+
+  $ git_commit.sh "My message here ..."
+  > ... your git project is checked in & synced with the server
+
+== REQUIREMENTS:
+
+* None
+
+== INSTALL:
+
+* sudo gem install git_utils
+
+== LICENSE:
+
+Property of Mercury Wireless Software LLC
