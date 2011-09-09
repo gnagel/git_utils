@@ -6,4 +6,4 @@ git push;
 git pull;
 git fetch;
 
-git submodule foreach "git_commit.sh '$1'"
+#git submodule foreach "git_commit.sh '$1'"
