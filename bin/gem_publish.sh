@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git_commit.sh "Releasing gem version"
+git_commit.sh "Releasing gem"
 
 rm *.gem;
 rake gemspec:generate &&
