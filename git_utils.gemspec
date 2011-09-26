@@ -5,14 +5,14 @@
 
 Gem::Specification.new do |s|
   s.name = %q{git_utils}
-  s.version = "1.0.8"
+  s.version = "1.0.9"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = [%q{Glenn Nagel}]
-  s.date = %q{2011-09-09}
+  s.date = %q{2011-09-26}
   s.description = %q{A gem that provides simple git & gem utility scripts.}
   s.email = [%q{glenn@mercury-wireless.com}]
-  s.executables = [%q{gem_publish.sh}, %q{git_commit.sh}]
+  s.executables = [%q{git_commit}, %q{git_sync}, %q{gem_publish}]
   s.extra_rdoc_files = [
     "History.txt",
     "Manifest.txt",
@@ -26,8 +26,6 @@ Gem::Specification.new do |s|
     "PostInstall.txt",
     "PostInstall_txt.html",
     "README.rdoc",
-    "bin/gem_publish.sh",
-    "bin/git_commit.sh",
     "doc/GitUtils.html",
     "doc/created.rid",
     "doc/images/brick.png",
@@ -59,6 +57,9 @@ Gem::Specification.new do |s|
     "doc/rdoc.css",
     "git_utils.gemspec",
     "lib/git_utils.rb",
+    "script/gem_publish.sh",
+    "script/git_commit.sh",
+    "script/git_sync.sh",
     "spec/git_utils_spec.rb",
     "spec/spec_helper.rb"
   ]
@@ -75,14 +76,14 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<hoe>, [">= 2.1.0"])
-      s.add_development_dependency(%q<hoe>, ["~> 2.9"])
+      s.add_development_dependency(%q<hoe>, ["~> 2.12"])
     else
       s.add_dependency(%q<hoe>, [">= 2.1.0"])
-      s.add_dependency(%q<hoe>, ["~> 2.9"])
+      s.add_dependency(%q<hoe>, ["~> 2.12"])
     end
   else
     s.add_dependency(%q<hoe>, [">= 2.1.0"])
-    s.add_dependency(%q<hoe>, ["~> 2.9"])
+    s.add_dependency(%q<hoe>, ["~> 2.12"])
   end
 end
 
