@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+system("git submodule foreach \"git_branch '#{ARGV[0]}'; echo ''\"")
+system("git branch -f \"#{ARGV[0]}\"")

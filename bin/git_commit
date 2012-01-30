@@ -1,6 +1,4 @@
 #!/usr/bin/env ruby
 
-dir = File.expand_path(File.dirname(__FILE__) + "/../script/git_commit.sh")
-puts "#{dir} '#{ARGV[0]}'"
-system("#{dir} '#{ARGV[0]}'")
-
+system("git_sync; git submodule foreach \"git_commit '#{ARGV[0]}'; echo ''\"")
+system("git add -A; git commit -m \"#{ARGV[0]}\"; git_sync")

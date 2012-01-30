@@ -1,16 +1,16 @@
 require 'rubygems' 
 
-dirname = File.dirname(__FILE__)
+BASE_DIR = File.dirname(__FILE__)
 
 gem 'hoe', '>= 2.1.0'
 require 'hoe'
-require dirname + "/lib/git_utils.rb"
+require BASE_DIR + "/lib/git_utils.rb"
 
 # Overwrite the manifest file
-GitUtils.sync_manifest(dirname)
-
-# Overwrite the version file
-GitUtils::sync_version(dirname, GitUtils::VERSION)
+File.open("#{BASE_DIR}/Manifest.txt", 'w') do |file| 
+  files = `cd #{BASE_DIR} && ls -R`.lines.collect { |l| l.strip!; l }
+  files.each { |file_name| file.puts file_name unless File.directory?(file_name) }
+end
 
 Hoe.plugin :newgem
 $hoe = Hoe.spec 'git_utils' do |p|
@@ -19,6 +19,7 @@ $hoe = Hoe.spec 'git_utils' do |p|
   p.post_install_message = 'PostInstall.txt'
   p.extra_deps          = []
   p.extra_deps << ['hoe', '>= 2.1.0']
+  p.extra_deps << ['yaml']
 end
 
 begin
