@@ -16,11 +16,13 @@ Hoe.plugin :newgem
 $hoe = Hoe.spec 'git_utils' do |p|
   p.developer('Glenn Nagel', 'glenn@mercury-wireless.com')
   p.remote_rdoc_dir      = '' # Release to root only one project
-  p.post_install_message = 'PostInstall.txt'
+  p.post_install_message = 'README.txt'
   p.extra_deps          = []
   p.extra_deps << ['hoe', '>= 2.1.0']
   p.extra_deps << ['yaml']
 end
+
+system("sudo gem install jeweler") unless `gem list | grep jeweler`.lines.collect{ |l| l.strip!; l }.count > 0
 
 begin
   require 'jeweler'
