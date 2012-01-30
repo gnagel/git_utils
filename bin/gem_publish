@@ -2,6 +2,6 @@
 
 system("rm *.gem 2>/dev/null")
 system("git_commit 'Releasing gem'")
-system("rake gemspec:generate && gem build ./*.gemspec && gem push ./*.gem; rm *.gem")
+system("gem build ./*.gemspec && gem push ./*.gem; rm *.gem")
 sleep(30)
 system("ls *.gemspec | sed 's/.gemspec$//g' | xargs gem install")
